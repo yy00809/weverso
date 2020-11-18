@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weverso</title>
+  <%= stylesheet_link_tag    'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand  navbar-dark bg-dark">
+      <div class="container">
+         <a class="navbar-brand">Weverso</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbar">
+           <ul class="navbar-nav mr-auto">
+             <li><%= link_to "Home", home_path %></li>
+           </ul>
+           <ul class="navbar-nav mr-auto">
+             <li><%= link_to "Create Event", new_event_path %></li>
+           </ul>
+         </div>
+      </div>
+   </nav>
+<div class="container">
+     <%= yield %>
+</div>
+</body>
+</html>

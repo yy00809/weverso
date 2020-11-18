@@ -1,0 +1,16 @@
+<h3>Add Comment</h3>
+<%= form_for([@event, @event.comments.build]) do |f| %>
+  <p>
+      <%= f.label :username %><br>
+      <%= f.text_field( :username, {:class => 'form_control'}) %><br>
+  </p>
+
+  <p>
+      <%= f.label :content %><br>
+      <%= f.text_field( :content, {:class => 'form_control'})  %><br>
+  </p>
+
+   <p>
+      <%= f.submit({:class => 'btn btn-primary'}) %>
+   </p>
+<%end%>
