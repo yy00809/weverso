@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
   <title>Weverso</title>
   <%= stylesheet_link_tag    'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css' %>
@@ -28,4 +29,18 @@
      <%= yield %>
 </div>
 </body>
+=======
+  <head>
+    <title>Weverso</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+>>>>>>> 1dc74a589cf7b96a03151e8cff6131d215400ee1
 </html>

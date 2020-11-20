@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 source 'http://rubygems.org'
+=======
+source 'https://rubygems.org'
+>>>>>>> 1dc74a589cf7b96a03151e8cff6131d215400ee1
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
