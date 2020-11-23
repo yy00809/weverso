@@ -16,6 +16,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
 
+
     if(@event.save)
         redirect_to @event
     else
@@ -43,7 +44,14 @@ class EventsController < ApplicationController
      redirect_to events_path
    end
 
+   def booking
+     @event = Event.find(params[:id])
+     @event.decrement(:guest_capacity)
+     @event.save
+     redirect_to @event
+   end
+
   private def event_params
-      params.require(:event).permit(:title, :description)
+      params.require(:event).permit(:title, :description, :guest_capacity)
   end
 end

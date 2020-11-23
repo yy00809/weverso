@@ -3,7 +3,9 @@
 one:
   title: MyString
   description: MyText
+  guest_capacity: 1
 
 two:
   title: MyString
   description: MyText
+  guest_capacity: 1

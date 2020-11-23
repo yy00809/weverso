@@ -1,9 +1,5 @@
 GEM
-<<<<<<< HEAD
-  remote: http://rubygems.org/
-=======
   remote: https://rubygems.org/
->>>>>>> 1dc74a589cf7b96a03151e8cff6131d215400ee1
   specs:
     actioncable (5.2.4.4)
       actionpack (= 5.2.4.4)
