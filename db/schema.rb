@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_23_120125) do
+ActiveRecord::Schema.define(version: 2020_11_24_134733) do
 
   create_table "comments", force: :cascade do |t|
     t.string "username"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 2020_11_23_120125) do
     t.integer "guest_capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "guests", force: :cascade do |t|
+    t.string "fullname"
+    t.text "email"
+    t.text "phonenumber"
+    t.integer "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_guests_on_event_id"
   end
 
 end

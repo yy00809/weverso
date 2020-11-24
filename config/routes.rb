@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :events do
     resources :comments
+    resources :guests
     patch 'booking', on: :member
   end
 

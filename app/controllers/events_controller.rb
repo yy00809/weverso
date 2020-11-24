@@ -48,7 +48,7 @@ class EventsController < ApplicationController
      @event = Event.find(params[:id])
      @event.decrement(:guest_capacity)
      @event.save
-     redirect_to @event
+     render 'guests/guest'
    end
 
   private def event_params
