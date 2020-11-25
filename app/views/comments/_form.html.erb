@@ -1,16 +1,11 @@
 <h4>Add Comment</h4>
 <%= form_for([@event, @event.comments.build]) do |f| %>
-  <p>
-      <%= f.label :username %><br>
-      <%= f.text_field( :username, {:class => 'form_control'}) %><br>
-  </p>
+      <%= f.label :username %>
+      <%= f.text_field( :username, {:class => 'form_control'}) %>
 
-  <p>
-      <%= f.label :content %><br>
-      <%= f.text_field( :content, {:class => 'form_control'})  %><br>
-  </p>
+      <%= f.label :content %>
+      <%= f.text_field( :content, {:class => 'form_control'})  %>
 
-   <p>
       <%= f.submit({:class => 'btn btn-primary'}) %>
-   </p>
+
 <%end%>

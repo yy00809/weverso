@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     patch 'booking', on: :member
   end
 
+  get 'contact', to:'events#contact'
+  post 'request_contact', to:'events#request_contact'
 end
