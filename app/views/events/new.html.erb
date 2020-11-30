@@ -1,26 +1,26 @@
-<h1>Add Event</h1>
-<%= form_for :event, url: events_path do |f| %>
-    <% if @event.errors.any? %>
-        <% @event.errors.full_messages.each do |msg| %>
-          <div class="alert alert_danger"><%= msg %></div>
-        <% end %>
-    <% end %>
-  <p>
-      <%= f.label :title %><br>
-      <%= f.text_field( :title, {:class => 'form_control'}) %><br>
-  </p>
+<div class="login-box">
+    <h1> Event</h1>
 
-  <p>
-      <%= f.label :description %><br>
-      <%= f.text_field( :description, {:class => 'form_control'})  %><br>
-  </p>
-
-  <p>
-      <%= f.label :guest_capacity %><br>
-      <%= f.number_field( :guest_capacity, {:class => 'form_control', :min => 1, :max=> 25})  %><br>
-  </p>
-
-   <p>
-      <%= f.submit({:class => 'btn btn-primary'}) %>
-   </p>
-<%end%>
+        <%= form_for :event, url: events_path do |f| %>
+            <% if @event.errors.any? %>
+                <% @event.errors.full_messages.each do |msg| %>
+                  <div class="alert alert_danger"><%= msg %></div>
+                <% end %>
+            <% end %>
+            <div class="user-box">
+                <%= f.label :title %>
+                <%= f.text_field( :title) %>
+            </div>
+            <div class="user-box">
+                <%= f.label :description %>
+                <%= f.text_field( :description)  %>
+            </div>
+            <div class="user-box">
+                <%= f.label :guest_capacity %>
+                <%= f.number_field( :guest_capacity, { :min => 1, :max=> 25})  %><br>
+            </div>
+            <div class="user-box">
+              <%= f.submit( :CREATE) %>
+            </div>
+        <%end%>
+</div>
