@@ -28,4 +28,19 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
      assert_nil flash[:alert]
      assert_not_empty flash[:notice]
    end
+
+   test "should get home" do
+     get events_url
+     assert_response :success
+
+     assert_template layout:'application'
+   end
+
+   test "should create an event" do
+     post events_url, events_params:
+     {title:"Jazz cozy night", description:"listening jazz beside a bonfire", guest_capacity:"8"}
+
+     assert_response :success
+   end
+
 end

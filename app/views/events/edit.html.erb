@@ -1,21 +1,23 @@
-<h1>Edit Event</h1>
-<%= form_for :event, url: event_path(@event), method: :patch do |f| %>
-    <% if @event.errors.any? %>
-        <% @event.errors.full_messages.each do |msg| %>
-          <div class="alert alert_danger"><%= msg %></div>
+<div class="login-box">
+    <h1>Edit</h1>
+    <%= form_for :event, url: event_path(@event), method: :patch do |f| %>
+        <% if @event.errors.any? %>
+            <% @event.errors.full_messages.each do |msg| %>
+              <div class="alert alert_danger"><%= msg %></div>
+            <% end %>
         <% end %>
-    <% end %>
-  <p>
-      <%= f.label :title %><br>
-      <%= f.text_field( :title, {:class => 'form_control'}) %><br>
-  </p>
+      <div class="user-box">
+          <%= f.label :title %><br>
+          <%= f.text_field( :title) %><br>
+      </div>
 
-  <p>
-      <%= f.label :description %><br>
-      <%= f.text_field( :description, {:class => 'form_control'})  %><br>
-  </p>
+      <div class="user-box">
+          <%= f.label :description %><br>
+          <%= f.text_field( :description)  %><br>
+      </div>
 
-   <p>
-      <%= f.submit({:class => 'btn btn-primary'}) %>
-   </p>
-<%end%>
+      <div class="user-box">
+          <%= f.submit( :SAVE) %>
+      </div>
+    <%end%>
+</div>

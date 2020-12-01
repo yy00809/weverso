@@ -1,21 +1,23 @@
-<h1>Resevation</h1>
-<%= form_for([@event, @event.guests.build]) do |f| %>
-  <p>
-      <%= f.label :fullname %><br>
-      <%= f.text_field( :fullname, {:class => 'form_control'}) %><br>
-  </p>
+<div class="login-box">
+    <h1>Information</h1>
+    <%= form_for([@event, @event.guests.build]) do |f| %>
+      <div class="user-box">
+          <%= f.label :fullname %><br>
+          <%= f.text_field( :fullname) %><br>
+      </div>
 
-  <p>
-      <%= f.label :email %><br>
-      <%= f.text_field( :email, {:class => 'form_control'})  %><br>
-  </p>
+      <div class="user-box">
+          <%= f.label :email %><br>
+          <%= f.text_field( :email)  %><br>
+      </div>
 
-  <p>
-      <%= f.label :phonenumber %><br>
-      <%= f.text_field( :phonenumber, {:class => 'form_control'})  %><br>
-  </p>
+      <div class="user-box">
+          <%= f.label :phonenumber %><br>
+          <%= f.text_field( :phonenumber)  %><br>
+      </div>
 
-   <p>
-      <%= f.submit({:class => 'btn btn-primary'}) %>
-   </p>
-<%end%>
+       <div class="user-box">
+          <%= f.submit( :BOOKING) %>
+      </div>
+    <%end%>
+</div>

@@ -1,16 +1,20 @@
+<br>
+<br>
 <h2><%= @event.title %></h2>
 <p><%= @event.description %></p>
 <p>Avalability: <%= @event.guest_capacity %></p>
 <hr>
-<%= link_to "Edit", edit_event_path(@event), :class => 'btn btn-primary' %>
+<%= link_to "Edit", edit_event_path(@event), :class => 'btn1' %>
 <%= link_to "Delete", event_path(@event),method: :delete,
                         data: {confirm: 'Are you sure?'},
-                        :class => 'btn btn-danger' %>
+                        :class => 'btn1' %>
 <hr>
 
-<%= link_to "Booking", booking_event_path(@event), method: :patch,:class => 'btn btn-danger' %>
-
-<hr>
+<%= link_to "Booking", booking_event_path(@event), method: :patch,:class => 'btn1' %>
+<br>
+<br>
+<br>
 
 <%= render 'comments/comments' %>
+<br>
 <%= render 'comments/form' %>
