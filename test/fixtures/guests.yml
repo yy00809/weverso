@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  fullname: MyString
-  email: MyText
-  phonenumber: MyText
+  fullname: yige yang
+  email: 15559898@gmail.com
+  phonenumber: 178274696124
   event: one
 
 two:
-  fullname: MyString
-  email: MyText
-  phonenumber: MyText
-  event: two
+  fullname: yige yang
+  email: 15559898@gmail.com
+  phonenumber: 178274696124
+  event: one

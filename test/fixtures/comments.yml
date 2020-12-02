@@ -3,9 +3,9 @@
 one:
   username: MyString
   content: MyText
-  event: 
+  event: one
 
 two:
   username: MyString
   content: MyText
-  event: 
+  event: one
