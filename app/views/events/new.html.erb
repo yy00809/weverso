@@ -1,12 +1,8 @@
 <div class="login-box">
     <h1> Event</h1>
 
-        <%= form_for :event, url: events_path do |f| %>
-            <% if @event.errors.any? %>
-                <% @event.errors.full_messages.each do |msg| %>
-                  <div class="alert alert_danger"><%= msg %></div>
-                <% end %>
-            <% end %>
+        <%= form_for @event, validate: true do |f| %>
+
             <div class="user-box">
                 <%= f.label :title %>
                 <%= f.text_field( :title) %>

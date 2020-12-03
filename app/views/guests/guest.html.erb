@@ -1,6 +1,6 @@
 <div class="login-box">
     <h1>Information</h1>
-    <%= form_for([@event, @event.guests.build]) do |f| %>
+    <%= form_for([@event, @event.guests.build], validate:true) do |f| %>
       <div class="user-box">
           <%= f.label :fullname %><br>
           <%= f.text_field( :fullname) %><br>

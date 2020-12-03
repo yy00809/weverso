@@ -1,3 +1,10 @@
+<header class="neon">WEVERSO</header>
+<nav>
+    <%= link_to "Events", home_path %>
+    <%= link_to "Create Event", new_event_path %>
+    <%= link_to "Contact us", contact_path %>
+</nav>
+<hr>
 <div class="notification">
     <% if flash[:notice] %>
        <div class="notice"><%= flash[:notice] %></div>

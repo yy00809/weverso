@@ -9,7 +9,12 @@ end
 
 ruby '2.5.1'
 
+gem 'jquery-rails', '~> 4.3'
+
+gem 'client_side_validations'
+
 gem 'rails-controller-testing'
+
 gem 'haml'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

@@ -7,18 +7,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
-      <header class="neon">WEVERSO</header>
-      <nav>
-
-           <%= link_to "Events", home_path %>
-
-            <%= link_to "Create Event", new_event_path %>
-
-            <%= link_to "Contact us", contact_path %>
-
-      </nav>
-      <hr>
       <div class="container">
         <%= render 'layouts/header' %>
         <%= yield %>

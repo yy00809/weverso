@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
-  has_many :comments
-  has_many :guests
+  has_many :comments, dependent: :delete_all
+  has_many :guests,dependent: :delete_all
   validates :title, presence: true,
                       length: {minimum: 5}
   validates :description, presence: true
