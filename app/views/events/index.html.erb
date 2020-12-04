@@ -1,16 +1,9 @@
-<br>
-<br>
-<br>
+
   <% @events.each do |event| %>
-
       <h3><%= event.title %></h3>
-
       <p><%= event.description %></p>
-
-
-        <span>
-      <%= link_to " Read More ", event_path(event), :class=>"btn1" %>
+      <span>
+        <%= link_to " Read More ", event_path(event), :class=>"btn1" %>
       </span>
-      
       <hr>
   <% end %>

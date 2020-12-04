@@ -12,7 +12,6 @@ class CommentsController < ApplicationController
     @comment = @event.comments.find(params[:id])
     @comment.destroy
     redirect_to event_path(@event)
-
   end
 
   private def comment_params

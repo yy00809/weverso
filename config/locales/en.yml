@@ -30,6 +30,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  layouts:
+    header:
+      title: 'WEVERSO'
+      button1: 'EVENTS'
+      button2: 'CREATE EVENT'
+      button3: 'CONTACT US'
+
+    footer:
+      about: 'About'
+      about_content: 'A private fun place'
+
+
   events:
     contact:
       title: Contact Us
@@ -46,5 +58,32 @@ en:
       submit: Contact Us
 
     request_contact:
-      no_email: You must supply an email address
+      no_email: You must supply an email address.
       email_sent: Thank you. We will be in touch shortly.
+
+    new:
+      title: 'Title:'
+      description: 'Description:'
+      guest_capacity: 'Guest capacity:'
+      submit: Create
+
+    edit:
+      title: 'Title:'
+      description: 'Description:'
+      submit: Save
+
+  guests:
+    booking:
+      success: Booking succeed.
+
+    guest:
+      fullname: 'Fullname:'
+      email: 'Email:'
+      phonenumber: 'Phonenumber:'
+      submit: 'Book'
+
+  comments:
+    form:
+      username: 'Username:'
+      content: 'Content:'
+      submit: 'Submit'

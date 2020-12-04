@@ -2,7 +2,8 @@ class GuestsController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
     @guest = @event.guests.create(guest_params)
-    redirect_to event_path(@event)
+    flash[:alert] = I18n.t('guests.booking.success')
+    redirect_to events_path
   end
 
   private def guest_params

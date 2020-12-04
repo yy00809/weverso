@@ -4,19 +4,19 @@
         <%= form_for @event, validate: true do |f| %>
 
             <div class="user-box">
-                <%= f.label :title %>
+                <%= f.label t('.title') %>
                 <%= f.text_field( :title) %>
             </div>
             <div class="user-box">
-                <%= f.label :description %>
+                <%= f.label t('.description') %>
                 <%= f.text_field( :description)  %>
             </div>
             <div class="user-box">
-                <%= f.label :guest_capacity %>
+                <%= f.label t('.guest_capacity') %>
                 <%= f.number_field( :guest_capacity, { :min => 1, :max=> 25})  %><br>
             </div>
             <div class="user-box">
-              <%= f.submit( :CREATE) %>
+              <%= f.submit( t('.submit')) %>
             </div>
         <%end%>
 </div>

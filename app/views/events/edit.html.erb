@@ -7,17 +7,17 @@
             <% end %>
         <% end %>
       <div class="user-box">
-          <%= f.label :title %><br>
+          <%= f.label t('.title') %><br>
           <%= f.text_field( :title) %><br>
       </div>
 
       <div class="user-box">
-          <%= f.label :description %><br>
+          <%= f.label t('.description') %><br>
           <%= f.text_field( :description)  %><br>
       </div>
 
       <div class="user-box">
-          <%= f.submit( :SAVE) %>
+          <%= f.submit( t('.submit')) %>
       </div>
     <%end%>
 </div>

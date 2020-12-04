@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   #Resource paths
   resources :events do
     resources :comments
-    resources :guests
+    post 'guests', to:'guests#create'
     patch 'booking', on: :member
   end
 
