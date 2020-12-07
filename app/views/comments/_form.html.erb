@@ -1,13 +1,17 @@
-<h4>Add Comment</h4>
+<%# Supply a form to create comments %>
+<h4><%= t('.title_this_section') %></h4>
 <%= form_for([@event, @event.comments.build], validate:true) do |f| %>
-      <%= f.label t('.username') %>
-      <%= f.text_field( :username) %>
-      <br>
-      <div>
-      <%= f.label t('.content') %>
-      <%= f.text_field( :content)  %>
-      </div>
-      <div>
-      <%= f.submit( t('.submit')) %>
-      </div>
+  <%= f.label t('.username') %>
+  <%= f.text_field( :username) %>
+  <br>
+
+  <div>
+  <%= f.label t('.content') %>
+  <%= f.text_field( :content)  %>
+  </div>
+
+  <div>
+  <%= f.submit( t('.submit')) %>
+  </div>
+
 <%end%>

@@ -1,23 +1,27 @@
+<%# Edit a selected event %>
 <div class="login-box">
-    <h1>Edit</h1>
-    <%= form_for @event, validate: true do |f| %>
-        <% if @event.errors.any? %>
-            <% @event.errors.full_messages.each do |msg| %>
-              <div class="alert alert_danger"><%= msg %></div>
-            <% end %>
-        <% end %>
-      <div class="user-box">
-          <%= f.label t('.title') %><br>
-          <%= f.text_field( :title) %><br>
-      </div>
+  <h1><%= t('.title_this_section') %></h1>
 
-      <div class="user-box">
-          <%= f.label t('.description') %><br>
-          <%= f.text_field( :description)  %><br>
-      </div>
+  <%= form_for @event, validate: true do |f| %>
+    <% if @event.errors.any? %>
+      <% @event.errors.full_messages.each do |msg| %>
+        <div class="alert alert_danger"><%= msg %></div>
+          <% end %>
+    <% end %>
 
-      <div class="user-box">
-          <%= f.submit( t('.submit')) %>
-      </div>
-    <%end%>
+    <div class="user-box">
+      <%= f.label t('.title') %><br>
+      <%= f.text_field( :title) %><br>
+    </div>
+
+    <div class="user-box">
+      <%= f.label t('.description') %><br>
+      <%= f.text_field( :description)  %><br>
+    </div>
+
+    <div class="user-box">
+      <%= f.submit( t('.submit')) %>
+    </div>
+
+  <%end%>
 </div>

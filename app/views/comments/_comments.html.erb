@@ -1,11 +1,13 @@
-<h4>Comments</h4>
+<%# Showing all comments related to @event %>
+
+<h4><%= t('.title_this_section') %></h4>
 <% @event.comments.each do |comment| %>
   <div class="well" >
     <p><strong><%= comment.username %></strong>:
       <%= comment.content %>
       <%= link_to '[X]', [comment.event, comment],
-                method: :delete,
-                data: {confirm: 'Are you sure?'} %>
+          method: :delete,
+          data: {confirm: 'Are you sure?'} %>
     </p>
   </div>
 <% end %>

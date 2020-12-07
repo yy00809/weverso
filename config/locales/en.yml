@@ -41,6 +41,8 @@ en:
       about: 'About'
       about_content: 'A private fun place'
 
+    application:
+      title: 'Weverso'
 
   events:
     contact:
@@ -62,15 +64,20 @@ en:
       email_sent: Thank you. We will be in touch shortly.
 
     new:
+      title_this_section: 'New Event'
       title: 'Title:'
       description: 'Description:'
       guest_capacity: 'Guest capacity:'
       submit: Create
 
     edit:
+      title_this_section: 'Edit'
       title: 'Title:'
       description: 'Description:'
       submit: Save
+
+    show:
+      title_this_section: 'Availability: '
 
   guests:
     booking:
@@ -83,7 +90,11 @@ en:
       submit: 'Book'
 
   comments:
+    comments:
+      title_this_section: 'Comments'
+
     form:
+      title_this_section: 'Add Comment'
       username: 'Username:'
       content: 'Content:'
       submit: 'Submit'

@@ -1,17 +1,19 @@
+<%# Header section %>
 <header class="neon"><%= t('.title') %></header>
 <nav>
-    <%= link_to t('.button1'), home_path %>
-    <%= link_to t('.button2'), new_event_path %>
-    <%= link_to t('.button3'), contact_path %>
+  <%= link_to t('.button1'), home_path %>
+  <%= link_to t('.button2'), new_event_path %>
+  <%= link_to t('.button3'), contact_path %>
 </nav>
 <hr>
 <div class="notification">
-    <% if flash[:notice] %>
-       <div class="notice"><%= flash[:notice] %></div>
-    <% end %>
-    <% if flash[:alert] %>
-       <div class="alert"><%= flash[:alert] %></div>
-    <% end %>
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+  <% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+  <% end %>
 </div>
+<br>
 <br>
 <br>

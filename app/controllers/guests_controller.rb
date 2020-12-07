@@ -1,3 +1,4 @@
+# Returning response to requests from events view
 class GuestsController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
@@ -7,8 +8,7 @@ class GuestsController < ApplicationController
   end
 
   private def guest_params
-      params.require(:guest).permit(:fullname, :email, :phonenumber)
-
+    params.require(:guest).permit(:fullname, :email, :phonenumber)
   end
 
 end

@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
- .footer {
+
+.footer {
    left: 0;
    bottom: 0;
    width: 100%;
@@ -22,7 +23,7 @@
    position: fixed;
  }
 
- .neon {
+.neon {
    color: #fff;
    font-size: 40px;
    position: fixed;
@@ -40,8 +41,7 @@
      0 0 150px #0ff;
  }
 
- .notification {
-
+.notification {
    height: 8%;
    width: 20%;
    background-color: #699696;
@@ -56,8 +56,6 @@
 
  }
 
-
-
  @-webkit-keyframes cssAnimation {
    0% {transform: scaleX(0);}
    70% {transform: scaleX(1);}
@@ -66,21 +64,20 @@
    100% {transform: scaleX(0);}
  }
 
-
-
- a,
- a:visited {
+a,
+a:visited {
    text-decoration: none;
    color: #ffffff;
  }
 
- nav{
+nav{
   width: 100%;
   position: fixed;
   top:50px;
   text-align:center;
   padding-top: 10px;
 }
+
 nav a{
   font-family: 'Oswald', sans-serif;
   font-weight:500;
@@ -93,6 +90,7 @@ nav a{
   position:relative;
   display:inline-block;
 }
+
 nav a:before{
   content:'';
   position: absolute;
@@ -102,10 +100,11 @@ nav a:before{
   top:47%;
   animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
+
 nav a:hover:before{
   animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
-
 }
+
 @keyframes in{
   0%{
     width: 0;
@@ -118,6 +117,7 @@ nav a:hover:before{
     width: 100%;
   }
 }
+
 @keyframes out{
   0%{
     width:100%;
@@ -130,6 +130,7 @@ nav a:hover:before{
     right: 0;
   }
 }
+
 @keyframes show{
   0%{
     opacity:0;

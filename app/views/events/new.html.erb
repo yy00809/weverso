@@ -1,22 +1,27 @@
+<%# Creaete a new event with a form %>
 <div class="login-box">
-    <h1> Event</h1>
+  <h1><%= t('.title_this_section') %></h1>
 
-        <%= form_for @event, validate: true do |f| %>
+  <%= form_for @event, validate: true do |f| %>
 
-            <div class="user-box">
-                <%= f.label t('.title') %>
-                <%= f.text_field( :title) %>
-            </div>
-            <div class="user-box">
-                <%= f.label t('.description') %>
-                <%= f.text_field( :description)  %>
-            </div>
-            <div class="user-box">
-                <%= f.label t('.guest_capacity') %>
-                <%= f.number_field( :guest_capacity, { :min => 1, :max=> 25})  %><br>
-            </div>
-            <div class="user-box">
-              <%= f.submit( t('.submit')) %>
-            </div>
-        <%end%>
+  <div class="user-box">
+    <%= f.label t('.title') %>
+    <%= f.text_field( :title) %>
+  </div>
+
+  <div class="user-box">
+    <%= f.label t('.description') %>
+    <%= f.text_field( :description)  %>
+  </div>
+
+  <div class="user-box">
+    <%= f.label t('.guest_capacity') %>
+    <%= f.number_field( :guest_capacity, { :min => 1, :max=> 25})  %><br>
+  </div>
+
+  <div class="user-box">
+    <%= f.submit( t('.submit')) %>
+  </div>
+
+  <%end%>
 </div>

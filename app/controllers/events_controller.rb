@@ -1,8 +1,10 @@
+# Returning response to requests from events view
 class EventsController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  http_basic_authenticate_with name: "yang", password:"1234", except: [:index, :show, :contact,
+                              :request_contact]
 
   def index
-      @events = Event.still_available
+    @events = Event.still_available
   end
 
   def contact
@@ -14,7 +16,6 @@ class EventsController < ApplicationController
     @email = params[:email]
     @telephone = params[:telephone]
     @message = params[:message]
-
     if @email.blank?
       flash[:alert] = I18n.t('events.request_contact.no_email')
       redirect_to contact_path
@@ -36,11 +37,10 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
 
-
     if(@event.save)
-        redirect_to @event
+      redirect_to @event
     else
-        render 'new'
+      render 'new'
     end
   end
 
@@ -52,26 +52,29 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
 
     if(@event.update(event_params))
-        redirect_to @event
+      redirect_to @event
     else
-        render 'new'
+      render 'new'
     end
   end
 
-   def destroy
-     @event = Event.find(params[:id])
-     @event.destroy
-     redirect_to events_path
-   end
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
 
-   def booking
-     @event = Event.find(params[:id])
-     @event.decrement(:guest_capacity)
-     @event.save
-     render 'guests/guest'
-   end
+    redirect_to events_path
+  end
+
+  # Booking an event by reducing the guest capacity by one, then create a associated guest
+  def booking
+    @event = Event.find(params[:id])
+    @event.decrement(:guest_capacity)
+    @event.save
+
+    render 'guests/guest'
+  end
 
   private def event_params
-      params.require(:event).permit(:title, :description, :guest_capacity)
+    params.require(:event).permit(:title, :description, :guest_capacity)
   end
 end

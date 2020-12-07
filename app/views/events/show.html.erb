@@ -1,9 +1,11 @@
+<%# Showing a particular event and render assciated comments and form with partials %>
 <br>
 <br>
 <h2><%= @event.title %></h2>
 <p><%= @event.description %></p>
-<p>Avalability: <%= @event.guest_capacity %></p>
+<p><%= t('.availability') %> <%= @event.guest_capacity %></p>
 <hr>
+
 <%= link_to "Edit", edit_event_path(@event), :class => 'btn1' %>
 <%= link_to "Delete", event_path(@event),method: :delete,
                         data: {confirm: 'Are you sure?'},
