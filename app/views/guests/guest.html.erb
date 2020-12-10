@@ -1,4 +1,4 @@
-# Using a form to store a guest's info while he/she wants to book an event
+<%# Using a form to store a guest's info while he/she wants to book an event %>
 <div class="login-box">
     <h1>Information</h1>
     <%= form_for([@event, @event.guests.build], validate:true) do |f| %>

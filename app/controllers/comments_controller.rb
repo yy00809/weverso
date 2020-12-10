@@ -1,6 +1,5 @@
 # Returning response to requests from comments view
 class CommentsController < ApplicationController
-  http_basic_authenticate_with name: "yang", password:"1234", only: [:destroy]
 
   def create
     @event = Event.find(params[:event_id])

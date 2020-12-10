@@ -17,8 +17,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should destroy comment" do
     assert_difference('Comment.count',-1) do
-      delete event_comment_url(@event,@comment),
-      headers: { Authorization: ActionController::HttpAuthentication::Basic.encode_credentials('yang', '1234') }
+      delete event_comment_url(@event,@comment)
     end
 
     assert_redirected_to event_url(@event)

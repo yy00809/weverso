@@ -1,7 +1,6 @@
 # Returning response to requests from events view
 class EventsController < ApplicationController
-  http_basic_authenticate_with name: "yang", password:"1234", except: [:index, :show, :contact,
-                              :request_contact]
+
 
   def index
     @events = Event.still_available
